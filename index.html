@@ -1,18 +1,21 @@
 <!DOCTYPE html>
+
  <html lang="en-us" />
+ 
  <head>
   <meta charset="utf-8" />
   <meta name="viewport" contents="width=device-width, initial-scale=1" />
-  <!-- Reset All Styles -->
-  <link rel="stylesheet" href="reset.css" />
+  
   <!-- Bootstrap 3.3.7 CDN -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
   <!-- RPG Game CSS -->
-  <link rel="stylesheet" href="styles.css" />
   <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
-   <title></title>
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
+   <title>Employee Time Data</title>
  </head>
+
  <body>
+ 
    <div class="container">
      <div class="jumbotron">
        <h1>Employee Data Management</h1>
@@ -35,12 +38,16 @@
   </div>
 </div>
      </div> <!-- Close current-employee -->
- 
-  
-  <div class="panel-body" id="info-div">
-    <div class="panel panel-default">
-    <div class="panel-heading"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;Add Employee</div>
-    <form>
+
+
+<div class="row current-employees">
+       <div class="panel panel-default panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Current Employees</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row panel-body-header">
+      <form>
       <div class="form-group">
         <label for="inputSearchTerm">Employee Name</label>
         <input type="search" class="form-control" id="nameInput">
@@ -59,9 +66,13 @@
       </div>
       <button type="submit" id="submitEmployee" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>&nbsp;Submit</button>
     </form>
+    </div>
   </div>
 </div>
-   <!-- Close container -->
+     </div> 
+ 
+  
+  
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Bootstrap javascript -->
