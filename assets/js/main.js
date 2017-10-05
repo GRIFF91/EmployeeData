@@ -32,8 +32,16 @@ $('#submitEmployee').on('click', function (event) {
 
 database.ref().on('child_added', function (snapshot) {
   var val = snapshot.val()
-  $('#d_emp-name').text(val.name)
-  $('#d_role').text(val.role)
-  $('#d_start-date').text(val.startDate)
-  $('#d_monthly-rate').text(val.payRate)
+  addEmployee(val)
 })
+
+function addEmployee( obj ) {
+  container = $('<div class="row">')
+  container.append($('<div>').addClass('col-xs-3').text(obj.name))
+  container.append($('<div>').addClass('col-xs-1').text(obj.role))
+  container.append($('<div>').addClass('col-xs-2').text(obj.startDate))
+  container.append($('<div>').addClass('col-xs-2').text(obj.startDate))
+  container.append($('<div>').addClass('col-xs-2').text(obj.payRate))
+  container.append($('<div>').addClass('col-xs-2').text(obj.payRate))
+  container.appendTo('#current-employees-div')
+}
